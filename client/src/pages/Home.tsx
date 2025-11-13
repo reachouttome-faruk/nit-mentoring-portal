@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Building2 } from "lucide-react";
 import ProgressStepper from "@/components/ProgressStepper";
 import StudentDetailsForm from "@/components/StudentDetailsForm";
 import SubjectPerformanceForm from "@/components/SubjectPerformanceForm";
@@ -21,7 +20,24 @@ export default function Home() {
   const [studentDetails, setStudentDetails] = useState<StudentDetails | null>(null);
   const [subjectPerformance, setSubjectPerformance] = useState<SubjectPerformance[]>([]);
   const [otherParameters, setOtherParameters] = useState<OtherParameters | null>(null);
+  const [logoDataUrl, setLogoDataUrl] = useState<string>("");
   const { toast } = useToast();
+
+  useEffect(() => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.drawImage(img, 0, 0);
+        setLogoDataUrl(canvas.toDataURL("image/png"));
+      }
+    };
+    img.src = "/navodaya-logo.png";
+  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem("mentoringData");
@@ -68,7 +84,7 @@ export default function Home() {
       otherParameters,
     };
 
-    const doc = generatePDF(reportData);
+    const doc = generatePDF(reportData, logoDataUrl);
     doc.save(`Mentoring_Report_${studentDetails.studentName.replace(/\s+/g, "_")}.pdf`);
     
     toast({
@@ -100,7 +116,12 @@ export default function Home() {
       <header className="border-b bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center gap-3">
-            <Building2 className="w-10 h-10 text-primary" data-testid="logo-nit" />
+            <img 
+              src="/navodaya-logo.png" 
+              alt="Navodaya Institute of Technology" 
+              className="w-12 h-12 object-contain" 
+              data-testid="logo-nit" 
+            />
             <div>
               <h1 className="text-xl font-semibold">Navodaya Institute of Technology</h1>
               <p className="text-sm text-muted-foreground">Students Mentoring Portal</p>

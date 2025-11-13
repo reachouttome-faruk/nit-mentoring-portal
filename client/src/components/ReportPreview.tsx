@@ -33,7 +33,14 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
 
       <Card>
         <CardHeader>
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-3">
+            <div className="flex justify-center">
+              <img 
+                src="/navodaya-logo.png" 
+                alt="Navodaya Institute of Technology" 
+                className="w-20 h-20 object-contain" 
+              />
+            </div>
             <h3 className="text-xl font-semibold">Navodaya Institute of Technology</h3>
             <p className="text-lg">Students Mentoring Report</p>
             <p className="text-sm text-muted-foreground">Department: {data.studentDetails.mentorDepartment}</p>
