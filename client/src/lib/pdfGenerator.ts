@@ -2,10 +2,18 @@ import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import type { MentoringReport } from "@shared/schema";
 
-export function generatePDF(data: MentoringReport, logoDataUrl?: string) {
+export function generatePDF(data: MentoringReport, logoDataUrl?: string, footerDataUrl?: string) {
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.width;
+  const pageHeight = doc.internal.pageSize.height;
   let yPos = 20;
+
+  const addFooter = () => {
+    if (footerDataUrl) {
+      const footerHeight = 8;
+      doc.addImage(footerDataUrl, "PNG", 0, pageHeight - footerHeight, pageWidth, footerHeight);
+    }
+  };
 
   if (logoDataUrl) {
     doc.addImage(logoDataUrl, "PNG", pageWidth / 2 - 15, yPos, 30, 30);
@@ -42,7 +50,8 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string) {
     theme: "grid",
     headStyles: { fillColor: [33, 91, 145], fontSize: 10 },
     styles: { fontSize: 9 },
-    margin: { left: 14, right: 14 },
+    margin: { left: 14, right: 14, bottom: 15 },
+    didDrawPage: addFooter,
   });
 
   yPos = (doc as any).lastAutoTable.finalY + 10;
@@ -63,7 +72,8 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string) {
     theme: "grid",
     headStyles: { fillColor: [33, 91, 145], fontSize: 10 },
     styles: { fontSize: 9 },
-    margin: { left: 14, right: 14 },
+    margin: { left: 14, right: 14, bottom: 15 },
+    didDrawPage: addFooter,
   });
 
   yPos = (doc as any).lastAutoTable.finalY + 10;
@@ -95,7 +105,8 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string) {
     theme: "grid",
     headStyles: { fillColor: [33, 91, 145], fontSize: 8 },
     styles: { fontSize: 7, cellPadding: 2 },
-    margin: { left: 14, right: 14 },
+    margin: { left: 14, right: 14, bottom: 15 },
+    didDrawPage: addFooter,
     columnStyles: {
       0: { cellWidth: 20 },
       1: { cellWidth: 15 },
@@ -138,7 +149,8 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string) {
     theme: "grid",
     headStyles: { fillColor: [33, 91, 145], fontSize: 10 },
     styles: { fontSize: 9, cellPadding: 3 },
-    margin: { left: 14, right: 14 },
+    margin: { left: 14, right: 14, bottom: 15 },
+    didDrawPage: addFooter,
     columnStyles: {
       0: { cellWidth: 60 },
       1: { cellWidth: 120 },

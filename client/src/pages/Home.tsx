@@ -21,22 +21,37 @@ export default function Home() {
   const [subjectPerformance, setSubjectPerformance] = useState<SubjectPerformance[]>([]);
   const [otherParameters, setOtherParameters] = useState<OtherParameters | null>(null);
   const [logoDataUrl, setLogoDataUrl] = useState<string>("");
+  const [footerDataUrl, setFooterDataUrl] = useState<string>("");
   const { toast } = useToast();
 
   useEffect(() => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => {
+    const logoImg = new Image();
+    logoImg.crossOrigin = "anonymous";
+    logoImg.onload = () => {
       const canvas = document.createElement("canvas");
-      canvas.width = img.width;
-      canvas.height = img.height;
+      canvas.width = logoImg.width;
+      canvas.height = logoImg.height;
       const ctx = canvas.getContext("2d");
       if (ctx) {
-        ctx.drawImage(img, 0, 0);
+        ctx.drawImage(logoImg, 0, 0);
         setLogoDataUrl(canvas.toDataURL("image/png"));
       }
     };
-    img.src = "/navodaya-logo.png";
+    logoImg.src = "/navodaya-logo.png";
+
+    const footerImg = new Image();
+    footerImg.crossOrigin = "anonymous";
+    footerImg.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = footerImg.width;
+      canvas.height = footerImg.height;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.drawImage(footerImg, 0, 0);
+        setFooterDataUrl(canvas.toDataURL("image/png"));
+      }
+    };
+    footerImg.src = "/footer-bar.png";
   }, []);
 
   useEffect(() => {
@@ -84,7 +99,7 @@ export default function Home() {
       otherParameters,
     };
 
-    const doc = generatePDF(reportData, logoDataUrl);
+    const doc = generatePDF(reportData, logoDataUrl, footerDataUrl);
     doc.save(`Mentoring_Report_${studentDetails.studentName.replace(/\s+/g, "_")}.pdf`);
     
     toast({
