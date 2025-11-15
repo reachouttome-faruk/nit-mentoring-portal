@@ -37,11 +37,11 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
             <div className="flex justify-center">
               <img 
                 src="/navodaya-logo.png" 
-                alt="Navodaya Institute of Technology" 
+                alt="Navodaya Institute of Technology (Autonomous)" 
                 className="w-20 h-20 object-contain" 
               />
             </div>
-            <h3 className="text-xl font-semibold">Navodaya Institute of Technology</h3>
+            <h3 className="text-xl font-semibold">Navodaya Institute of Technology (Autonomous)</h3>
             <p className="text-lg">Students Mentoring Report</p>
             <p className="text-sm text-muted-foreground">Department: {data.studentDetails.mentorDepartment}</p>
           </div>

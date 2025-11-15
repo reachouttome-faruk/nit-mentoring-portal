@@ -145,12 +145,12 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img 
               src="/navodaya-logo.png" 
-              alt="Navodaya Institute of Technology" 
+              alt="Navodaya Institute of Technology (Autonomous)" 
               className="w-12 h-12 object-contain" 
               data-testid="logo-nit" 
             />
             <div>
-              <h1 className="text-xl font-semibold">Navodaya Institute of Technology</h1>
+              <h1 className="text-xl font-semibold">Navodaya Institute of Technology (Autonomous)</h1>
               <p className="text-sm text-muted-foreground">Students Mentoring Portal</p>
             </div>
           </div>

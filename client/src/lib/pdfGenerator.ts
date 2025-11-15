@@ -22,7 +22,7 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string, footerD
 
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
-  doc.text("Navodaya Institute of Technology", pageWidth / 2, yPos, { align: "center" });
+  doc.text("Navodaya Institute of Technology (Autonomous)", pageWidth / 2, yPos, { align: "center" });
   yPos += 7;
 
   doc.setFontSize(12);
