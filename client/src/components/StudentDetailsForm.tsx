@@ -18,6 +18,9 @@ export default function StudentDetailsForm({ defaultValues, onSubmit }: StudentD
       studentName: "",
       class: "",
       section: "",
+      attendanceAsOnDate: "",
+      currentCGPA: "",
+      mentoringPeriod: "",
       mentorName: "",
       mentorDesignation: "",
       mentorDepartment: "",
@@ -67,6 +70,45 @@ export default function StudentDetailsForm({ defaultValues, onSubmit }: StudentD
                   <FormLabel>Section *</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g., A, B, C" data-testid="input-section" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="attendanceAsOnDate"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Attendance as on Date *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., 85% (as on 15/11/2025)" data-testid="input-attendance-date" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="currentCGPA"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Current CGPA *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., 8.5" data-testid="input-cgpa" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="mentoringPeriod"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Mentoring Period *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., July 2025 - November 2025" data-testid="input-mentoring-period" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

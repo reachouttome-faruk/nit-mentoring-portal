@@ -61,6 +61,12 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
               <span data-testid="text-class">{data.studentDetails.class}</span>
               <span className="font-medium">Section:</span>
               <span data-testid="text-section">{data.studentDetails.section}</span>
+              <span className="font-medium">Attendance as on Date:</span>
+              <span data-testid="text-attendance-date">{data.studentDetails.attendanceAsOnDate}</span>
+              <span className="font-medium">Current CGPA:</span>
+              <span data-testid="text-cgpa">{data.studentDetails.currentCGPA}</span>
+              <span className="font-medium">Mentoring Period:</span>
+              <span data-testid="text-mentoring-period">{data.studentDetails.mentoringPeriod}</span>
             </div>
           </CardContent>
         </Card>
