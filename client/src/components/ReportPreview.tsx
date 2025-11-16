@@ -90,7 +90,7 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
 
       <Card>
         <CardHeader>
-          <CardTitle>Subject-wise Performance</CardTitle>
+          <CardTitle>IA Subject-wise Performance</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">

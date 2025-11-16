@@ -6,7 +6,7 @@ A comprehensive web application for Navodaya Institute of Technology faculties t
 ## Current State
 The application is fully functional with a 5-step form flow:
 1. **Student Details** - Student and mentor information including attendance, CGPA, and mentoring period
-2. **Subject Performance** - Multi-subject tracking with teaching faculty, weaknesses, marks, outcomes, and mentor remarks
+2. **IA Subject-wise Performance** - Multi-subject tracking with teaching faculty, weaknesses, marks, outcomes, and mentor remarks
 3. **Backlog Information** - Dynamic tracking of backlog subjects with proposed actions
 4. **Other Parameters** - Comprehensive tracking of academic, skill, activity, and other student parameters
 5. **Review** - Preview and download PDF report with college branding

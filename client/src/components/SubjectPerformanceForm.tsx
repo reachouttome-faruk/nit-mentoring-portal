@@ -81,7 +81,7 @@ export default function SubjectPerformanceForm({ defaultValues, onSubmit, onBack
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>
-              <CardTitle>Subject-wise Performance</CardTitle>
+              <CardTitle>IA Subject-wise Performance</CardTitle>
               <CardDescription>Enter performance details for each subject</CardDescription>
             </div>
             <Button onClick={addSubject} variant="outline" size="sm" data-testid="button-add-subject">

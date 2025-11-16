@@ -88,7 +88,7 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string, footerD
 
   doc.setFontSize(11);
   doc.setFont("helvetica", "bold");
-  doc.text("Subject-wise Performance", 14, yPos);
+  doc.text("IA Subject-wise Performance", 14, yPos);
   yPos += 5;
 
   autoTable(doc, {
