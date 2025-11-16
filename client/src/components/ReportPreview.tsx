@@ -198,6 +198,30 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
                 <TableCell>{data.otherParameters.ranksAwardsRecognitions}</TableCell>
               </TableRow>
               <TableRow>
+                <TableCell className="font-medium">Internship/Training Undertaken</TableCell>
+                <TableCell>{data.otherParameters.internshipTrainingUndertaken}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Internship/Training Duration</TableCell>
+                <TableCell>{data.otherParameters.internshipDuration}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Internship/Training Skills Gained</TableCell>
+                <TableCell>{data.otherParameters.internshipSkillsGained}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Project/Research Title</TableCell>
+                <TableCell>{data.otherParameters.projectTitle}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Project/Research Description</TableCell>
+                <TableCell>{data.otherParameters.projectDescription}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Project/Research Outcome</TableCell>
+                <TableCell>{data.otherParameters.projectOutcome}</TableCell>
+              </TableRow>
+              <TableRow>
                 <TableCell className="font-medium">Involvement in Any In-disciplinary Activities</TableCell>
                 <TableCell>{data.otherParameters.indisciplinaryActivities}</TableCell>
               </TableRow>

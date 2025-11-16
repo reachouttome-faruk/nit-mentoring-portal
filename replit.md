@@ -26,16 +26,31 @@ The application is fully functional with a 5-step form flow:
   - "Current Status" → "Status of Outcome"
 
 ### Other Parameters Section Restructure
-Updated with new comprehensive headings:
+Updated with new comprehensive headings organized into 5 categories:
+
+**1. Academic Performance:**
 - Academic Track (SGPA-Semester-wise)
 - Attendance and Alerts Issued (to Parents/Guardians)
-- Skill Possession (Based on Assessment Tests):
-  - Technical / Programming Skills
-  - Aptitude Skills
+
+**2. Skill Possession (Based on Assessment Tests):**
+- Technical / Programming Skills
+- Aptitude Skills
+
+**3. Activities & Achievements:**
 - Participation in NIT Clubs or Certification Trainings
 - Participation in Co-Curricular Activities (Workshops, Seminars, Guest Lectures, etc.)
 - Participation in Extra-Curricular Activities (Sports, Cultural, NSS, etc.)
 - Ranks / Awards / Recognitions at College or University Level
+
+**4. Internship/Training & Projects:**
+- Internship/Training Undertaken
+- Duration
+- Skills Gained
+- Project/Research Title
+- Description
+- Outcome
+
+**5. Other Information:**
 - Involvement in Any In-disciplinary Activities
 - Current Health Status
 - Number of Parent Visits to the College

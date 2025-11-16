@@ -24,6 +24,12 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
       coCurricularActivities: "",
       extraCurricularActivities: "",
       ranksAwardsRecognitions: "",
+      internshipTrainingUndertaken: "",
+      internshipDuration: "",
+      internshipSkillsGained: "",
+      projectTitle: "",
+      projectDescription: "",
+      projectOutcome: "",
       indisciplinaryActivities: "",
       currentHealthStatus: "",
       parentVisits: "",
@@ -162,6 +168,99 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
                 </FormItem>
               )}
             />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Internship/Training & Projects</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-4">
+              <h4 className="font-semibold text-sm">Internship/Training</h4>
+              <FormField
+                control={form.control}
+                name="internshipTrainingUndertaken"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Internship/Training Undertaken</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Software Development Intern at ABC Corp..." data-testid="input-internship-undertaken" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="internshipDuration"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Duration</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="3 months (June 2024 - August 2024)..." data-testid="input-internship-duration" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="internshipSkillsGained"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Skills Gained</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="React.js, Node.js, MongoDB, REST API development..." data-testid="input-internship-skills" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <div className="space-y-4 pt-4 border-t">
+              <h4 className="font-semibold text-sm">Projects and Research</h4>
+              <FormField
+                control={form.control}
+                name="projectTitle"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Project/Research Title</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Smart Agriculture Monitoring System..." data-testid="input-project-title" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="projectDescription"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Description</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Developed an IoT-based system for monitoring soil moisture, temperature..." data-testid="input-project-description" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="projectOutcome"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Outcome</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Successfully deployed on 5 farms, reduced water usage by 30%..." data-testid="input-project-outcome" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
           </CardContent>
         </Card>
 
