@@ -11,7 +11,19 @@ The application is fully functional with a 5-step form flow:
 4. **Other Parameters** - Comprehensive tracking of academic, skill, activity, and other student parameters
 5. **Review** - Preview and download PDF report with college branding
 
-## Recent Changes (November 17, 2025)
+## Recent Changes (November 18, 2025)
+
+### Skill Possession Section Restructuring
+- Combined "Technical / Programming Skills" and "Aptitude Skills" into single field: "Technical / Programming / Aptitude Skills"
+- Added new field: "Skill Based Certificates (online/offline)"
+- Removed "Participation in NIT Clubs or Certification Done" from Activities & Achievements section
+- All changes reflected in form, preview, and PDF output
+
+### Section Title Updates
+- Renamed "Skill Possession (Based on Assessment Tests)" to "Skill Possession"
+- Renamed "University Registration Number (USN)" to "Student USN"
+
+## Previous Changes (November 17, 2025)
 
 ### Student Information Section Enhancements
 - Added Student USN field - required
@@ -31,7 +43,7 @@ The application is fully functional with a 5-step form flow:
 - Signature sections arranged in a 2x2 grid layout with signature lines
 - Automatically adds new page if insufficient space
 
-### Section Title Updates
+### Initial Section Title Updates
 - Renamed "Subject-wise Performance" to "IA Subject-wise Performance"
 - Renamed "Participation in NIT Clubs or Certification Trainings" to "Participation in NIT Clubs or Certification Done"
 
@@ -57,11 +69,10 @@ Updated with new comprehensive headings organized into 5 categories:
 - Attendance and Alerts Issued (to Parents/Guardians)
 
 **2. Skill Possession:**
-- Technical / Programming Skills
-- Aptitude Skills
+- Technical / Programming / Aptitude Skills (combined field)
+- Skill Based Certificates (online/offline)
 
 **3. Activities & Achievements:**
-- Participation in NIT Clubs or Certification Done
 - Participation in Co-Curricular Activities (Workshops, Seminars, Guest Lectures, etc.)
 - Participation in Extra-Curricular Activities (Sports, Cultural, NSS, etc.)
 - Ranks / Awards / Recognitions at College or University Level

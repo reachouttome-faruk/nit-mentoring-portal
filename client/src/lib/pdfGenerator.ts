@@ -184,9 +184,8 @@ export function generatePDF(data: MentoringReport, logoDataUrl?: string, footerD
     body: [
       ["Academic Track (SGPA-Semester-wise)", otherParams.academicTrackSGPA],
       ["Attendance and Alerts Issued (to Parents/Guardians)", otherParams.attendanceAlerts],
-      ["Skill Possession - Technical / Programming Skills", otherParams.technicalProgrammingSkills],
-      ["Skill Possession - Aptitude Skills", otherParams.aptitudeSkills],
-      ["Participation in NIT Clubs or Certification Done", otherParams.clubsTrainings],
+      ["Technical / Programming / Aptitude Skills", otherParams.skillsPossession],
+      ["Skill Based Certificates (online/offline)", otherParams.skillBasedCertificates],
       ["Participation in Co-Curricular Activities (Workshops, Seminars, Guest Lectures, etc.)", otherParams.coCurricularActivities],
       ["Participation in Extra-Curricular Activities (Sports, Cultural, NSS, etc.)", otherParams.extraCurricularActivities],
       ["Ranks / Awards / Recognitions at College or University Level", otherParams.ranksAwardsRecognitions],

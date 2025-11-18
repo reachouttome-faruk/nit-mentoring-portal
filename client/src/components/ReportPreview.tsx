@@ -192,16 +192,12 @@ export default function ReportPreview({ data, onDownload, onEdit, onNewEntry }: 
                 <TableCell>{data.otherParameters.attendanceAlerts}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Skill Possession - Technical / Programming Skills</TableCell>
-                <TableCell>{data.otherParameters.technicalProgrammingSkills}</TableCell>
+                <TableCell className="font-medium">Technical / Programming / Aptitude Skills</TableCell>
+                <TableCell>{data.otherParameters.skillsPossession}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Skill Possession - Aptitude Skills</TableCell>
-                <TableCell>{data.otherParameters.aptitudeSkills}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Participation in NIT Clubs or Certification Done</TableCell>
-                <TableCell>{data.otherParameters.clubsTrainings}</TableCell>
+                <TableCell className="font-medium">Skill Based Certificates (online/offline)</TableCell>
+                <TableCell>{data.otherParameters.skillBasedCertificates}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">Participation in Co-Curricular Activities (Workshops, Seminars, Guest Lectures, etc.)</TableCell>

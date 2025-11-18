@@ -18,9 +18,8 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
     defaultValues: defaultValues || {
       academicTrackSGPA: "",
       attendanceAlerts: "",
-      technicalProgrammingSkills: "",
-      aptitudeSkills: "",
-      clubsTrainings: "",
+      skillsPossession: "",
+      skillBasedCertificates: "",
       coCurricularActivities: "",
       extraCurricularActivities: "",
       ranksAwardsRecognitions: "",
@@ -84,12 +83,13 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
           <CardContent className="space-y-4">
             <FormField
               control={form.control}
-              name="technicalProgrammingSkills"
+              name="skillsPossession"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Technical / Programming Skills</FormLabel>
+                  <FormLabel>Technical / Programming / Aptitude Skills</FormLabel>
+                  <FormDescription>Include technical skills, programming languages, and aptitude skills</FormDescription>
                   <FormControl>
-                    <Textarea placeholder="Proficient in Java, C++, Python..." data-testid="input-technical-skills" {...field} />
+                    <Textarea placeholder="Technical: Java, Python, C++; Aptitude: Logical reasoning - Good, Quantitative - Average..." data-testid="input-skills-possession" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -97,12 +97,12 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
             />
             <FormField
               control={form.control}
-              name="aptitudeSkills"
+              name="skillBasedCertificates"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Aptitude Skills</FormLabel>
+                  <FormLabel>Skill Based Certificates (online/offline)</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Logical reasoning: Good, Quantitative: Average..." data-testid="input-aptitude-skills" {...field} />
+                    <Textarea placeholder="AWS Certified Developer, Google Analytics Certification..." data-testid="input-skill-certificates" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -116,19 +116,6 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
             <CardTitle>Activities & Achievements</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <FormField
-              control={form.control}
-              name="clubsTrainings"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Participation in NIT Clubs or Certification Done</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="Member of Coding Club, AWS Certification..." data-testid="input-clubs-trainings" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <FormField
               control={form.control}
               name="coCurricularActivities"

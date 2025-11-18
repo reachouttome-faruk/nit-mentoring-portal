@@ -37,9 +37,8 @@ export const backlogSchema = z.object({
 export const otherParametersSchema = z.object({
   academicTrackSGPA: z.string(),
   attendanceAlerts: z.string(),
-  technicalProgrammingSkills: z.string(),
-  aptitudeSkills: z.string(),
-  clubsTrainings: z.string(),
+  skillsPossession: z.string(),
+  skillBasedCertificates: z.string(),
   coCurricularActivities: z.string(),
   extraCurricularActivities: z.string(),
   ranksAwardsRecognitions: z.string(),
