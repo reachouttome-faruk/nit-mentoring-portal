@@ -79,7 +79,7 @@ export default function OtherParametersForm({ defaultValues, onSubmit, onBack }:
 
         <Card>
           <CardHeader>
-            <CardTitle>Skill Possession (Based on Assessment Tests)</CardTitle>
+            <CardTitle>Skill Possession</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <FormField

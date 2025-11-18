@@ -56,7 +56,7 @@ Updated with new comprehensive headings organized into 5 categories:
 - Academic Track (SGPA-Semester-wise)
 - Attendance and Alerts Issued (to Parents/Guardians)
 
-**2. Skill Possession (Based on Assessment Tests):**
+**2. Skill Possession:**
 - Technical / Programming Skills
 - Aptitude Skills
 
