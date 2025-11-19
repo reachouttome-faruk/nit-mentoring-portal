@@ -81,6 +81,7 @@ Visit the live application: [Your GitHub Pages URL]
    ```bash
    npm install
    ```
+   This will install all frontend-only dependencies needed for the app.
 
 3. **Start development server**
    ```bash
@@ -91,6 +92,8 @@ Visit the live application: [Your GitHub Pages URL]
    ```
    http://localhost:5173
    ```
+
+**Note:** If you downloaded this from Replit, make sure you've followed the deployment guide to replace the package.json and regenerate the lockfile.
 
 ### Build for Production
 

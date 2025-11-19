@@ -19,12 +19,20 @@ This guide will help you deploy the Students Mentoring Portal to GitHub Pages.
 ### Step 2: Prepare for GitHub
 
 1. Open the extracted folder in your terminal
+
 2. Replace `package.json` with `package.github.json`:
    ```bash
    mv package.github.json package.json
    ```
 
-3. Edit `vite.config.github.ts` and replace `'your-repo-name'` with your actual repository name:
+3. Delete the old package-lock.json and regenerate it:
+   ```bash
+   rm package-lock.json
+   npm install
+   ```
+   This ensures the lockfile matches your new frontend-only dependencies.
+
+4. Edit `vite.config.github.ts` and replace `'your-repo-name'` with your actual repository name:
    ```typescript
    const REPO_NAME = 'nit-mentoring-portal'; // Change this!
    ```
@@ -43,7 +51,7 @@ Run these commands in your project folder:
 # Initialize git repository
 git init
 
-# Add all files
+# Add all files (including the new package-lock.json)
 git add .
 
 # Commit
@@ -56,6 +64,8 @@ git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 git branch -M main
 git push -u origin main
 ```
+
+**Important:** Make sure you committed the regenerated `package-lock.json` file. The GitHub Actions workflow uses `npm ci` which requires an up-to-date lockfile.
 
 ### Step 5: Enable GitHub Actions
 
