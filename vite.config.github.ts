@@ -4,7 +4,7 @@ import path from "path";
 
 // GitHub Pages deployment configuration
 // Replace 'your-repo-name' with your actual GitHub repository name
-const REPO_NAME = 'your-repo-name';
+const REPO_NAME = 'nit-mentoring-portal';
 
 export default defineConfig({
   base: `/${REPO_NAME}/`,
